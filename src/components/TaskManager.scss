@@ -1,0 +1,60 @@
+.footer {
+  background: rgba(51, 51, 51, 0.4);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.task-manager {
+  padding: 20px;
+
+  .task-columns {
+    display: flex;
+    justify-content: space-between;
+
+    .task-column {
+      width: 40%;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      min-height: 300px;
+
+      h3 {
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        span {
+          font-weight: normal;
+        }
+      }
+
+      .task-card {
+        background: #f5f5f5;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 4px;
+        cursor: grab;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        &.urgent {
+          border-left: 5px solid red;
+        }
+
+        &.high {
+          border-left: 5px solid orange;
+        }
+
+        &.low {
+          border-left: 5px solid blue;
+        }
+
+        button {
+          margin-top: 10px;
+          display: block;
+        }
+      }
+    }
+  }
+}
